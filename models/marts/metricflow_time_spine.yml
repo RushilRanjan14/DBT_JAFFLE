@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: metricflow_time_spine
+    description: "Generates a time spine with dates spanning 10 years"
+    columns:
+      - name: date_day
+        description: "The primary key representing each day in the time spine"
+        tests:
+          - unique
+          - not_null
+          - dbt_utils.primary_key:
+              columns: ['date_day']

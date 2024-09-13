@@ -1,7 +1,11 @@
+models:
+  - name: products 
+    description: Customer overview data mart, offering key details for each unique customer. One row per customer.
+
 semantic_models:
   #The name of the semantic model.
   - name: products
-    description: |
+    description: products overview
       Product dimension table. The grain of the table is one row per product.
     #The name of the dbt model and schema
     model: ref('products')
