@@ -17,6 +17,7 @@ sources:
       - name: raw_items
         description: Items included in an order
       - name: raw_stores
+        description: Items included in an raw_stores
         loaded_at_field: opened_at
       - name: raw_products
         description: One record per SKU for items sold in stores

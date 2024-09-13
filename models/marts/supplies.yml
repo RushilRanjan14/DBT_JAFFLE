@@ -1,7 +1,18 @@
+models:
+  - name: supplies
+    description: Customer overview data mart, offering key details for each unique customer. One row per customer.
+
+    columns:
+      - name: customer_id
+        description: The unique key of the orders mart.
+        data_tests:
+          - not_null
+          - unique
+
 semantic_models:
   #The name of the semantic model.
   - name: supplies
-    description: |
+    description: supplies overview
       Supplies dimension table. The grain of the table is one row per supply and product combination.
     #The name of the dbt model and schema
     model: ref('supplies')

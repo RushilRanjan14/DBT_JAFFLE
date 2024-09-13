@@ -1,6 +1,16 @@
+models:
+  - name: locations
+    description: location overview data mart, offering key details for each unique customer. One row per customer.
+    columns:
+      - name: LOCATION_ID
+        description: The unique key of the location mart.
+        data_tests:
+          - not_null
+          - unique
+
 semantic_models:
   - name: locations
-    description: |
+    description: location overview sgdtgtd
       Location dimension table. The grain of the table is one row per location.
     model: ref('locations')
     defaults:
